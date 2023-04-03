@@ -12,7 +12,8 @@ $teal: #51b6c8;
 }
 
 body {
-    color: white;
+    color: $off-white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .grid-container {
@@ -25,36 +26,100 @@ body {
         "main";
 }
 
-header {
+.primary-header {
     grid-area: header;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 20px;
+    height: 80px;
     background-color: $purple-light;
+    color: white;
 
-    .bell-icon {
-        width: 30px;
+    h1 {
+        flex: 1;
+        font-weight: 400;
+
+        strong {
+            font-weight: 700;
+        }
+
+        sup {
+            font-size: 0.7rem;
+        }
+    }
+
+    .bell-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 50px;
+        width: 50px;
+
+        .bell-icon {
+            width: 28px;
+            fill: $off-white;
+        }
+    
+        #notifications {
+            position: absolute;
+            background-color: #90ee90;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            top: 4px;
+            right: 8px;
+        }
+    }
+
+    .vh {
+        height: 50px;
+        border-left: 2px solid #8387b3;
     }
 
     img {
-        width: 80px;
+        width: 50px;
         border-radius: 50%;
+    }
+
+    span {
+        font-size: 1.1rem;
     }
 }
 
 nav {
     grid-area: navigation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     background-color: $puprle-dark;
+    height: 68px;
 
-    img {
-        height: 100px;
+    svg {
+        height: 40px;
+        fill: $off-white;
     }
 }
 
 main {
     grid-area: main;
+    color: black;
+}
+
+.main-header {
+    background-color: lightblue;
+    height: 80px;
+
+    .headline {
+
+    }
+
+    .tab {
+
+    }
 }
 
 @media (min-width: 768px) {

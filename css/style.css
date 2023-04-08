@@ -8,6 +8,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 400;
   padding-block: 5px;
+  font-size: 0.95rem;
 }
 
 hr {
@@ -32,52 +33,56 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px;
-  height: 80px;
+  padding: 20px 10px;
+  height: 64px;
   background-color: #7477bf;
   color: white;
 }
 .primary-header h1 {
   flex: 1;
   font-weight: 400;
+  font-size: 1.35rem;
 }
 .primary-header h1 strong {
   font-weight: 700;
 }
 .primary-header h1 sup {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 .primary-header .bell-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 .primary-header .bell-container .bell-icon {
-  width: 28px;
+  width: 22px;
   fill: #f7f7f7;
+}
+.primary-header .bell-container .bell-icon:hover {
+  cursor: pointer;
 }
 .primary-header .bell-container #notifications {
   position: absolute;
   background-color: #90ee90;
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   top: 4px;
   right: 8px;
 }
 .primary-header .vh {
-  height: 50px;
+  height: 40px;
   border-left: 2px solid #8387b3;
 }
 .primary-header img {
-  width: 50px;
+  width: 38px;
   border-radius: 50%;
 }
 .primary-header span {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 nav {
@@ -85,12 +90,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   background-color: #474669;
-  height: 68px;
+  height: 54px;
 }
 nav svg {
-  height: 40px;
+  height: 30px;
   fill: #f7f7f7;
 }
 
@@ -103,38 +108,39 @@ main {
 .main-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  height: 70px;
-  margin-left: 20px;
+  gap: 15px;
+  height: 50px;
+  margin-left: 15px;
 }
 .main-header .headline {
   background-color: white;
   font-weight: 400;
+  font-size: 1.1rem;
 }
 .main-header .tab {
   flex: 1;
-  height: 70px;
+  height: 50px;
   background-color: #f7f7f7;
   border: 2px solid #cccccc;
   border-width: 0 0 2px 2px;
 }
 
 #alert {
-  height: 50px;
+  height: 36px;
   color: #f7f7f7;
   background-color: #7477bf;
-  margin: 20px;
-  border-radius: 8px;
+  margin: 15px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
 }
 #alert span {
-  font-size: 1.25rem;
-  padding: 20px;
+  font-size: 0.9rem;
+  padding: 15px;
 }
 
 section {
-  margin: 20px;
+  margin: 15px;
 }
 
 .traffic .traffic-header .traffic-nav {
@@ -142,14 +148,17 @@ section {
   background-color: white;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .traffic .traffic-header .traffic-nav .traffic-nav-link {
   background-color: transparent;
   color: black;
-  font-size: 1.25rem;
-  padding: 10px 16px;
+  font-size: 0.95rem;
+  padding: 7px 10px;
   border-radius: 20px;
+}
+.traffic .traffic-header .traffic-nav .traffic-nav-link:hover {
+  cursor: pointer;
 }
 .traffic .traffic-header .traffic-nav .traffic-nav-link.active {
   background-color: #81c98f;
@@ -161,7 +170,7 @@ section {
 
 .daily h3,
 .mobile h3 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .daily .widget-container-half img,
 .mobile .widget-container-half img {
@@ -173,7 +182,7 @@ section {
 .activity h3,
 .message h3,
 .settings h3 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .social-container {
@@ -182,33 +191,33 @@ section {
   align-items: center;
   background-color: #f7f7f7;
   border: 2px solid #cccccc;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  height: 120px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  height: 96px;
 }
 .social-container .social-image {
   margin: 20px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: #7477bf;
-  border: 20px solid #7477bf;
+  border: 15px solid #7477bf;
   border-radius: 50%;
 }
 .social-container .social-image svg {
   fill: white;
 }
 .social-container .social-text p:first-child {
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   color: #7477bf;
 }
 .social-container .social-text p:last-child {
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: #757575;
 }
 
 .members hr,
 .activity hr {
-  margin-block: 20px;
+  margin-block: 15px;
 }
 
 .members-container {
@@ -242,16 +251,15 @@ section {
   border: 2px solid #cccccc;
   border-radius: 8px;
   padding: 10px 10px 10px 15px;
+  font-size: 1.25rem;
 }
 .widget-container input::-moz-placeholder, .widget-container textarea::-moz-placeholder, .widget-container button::-moz-placeholder {
   color: #777;
-  font-size: 1.25rem;
 }
 .widget-container input::placeholder,
 .widget-container textarea::placeholder,
 .widget-container button::placeholder {
   color: #777;
-  font-size: 1.25rem;
 }
 .widget-container input,
 .widget-container textarea {
@@ -266,6 +274,9 @@ section {
   color: #f7f7f7;
   text-transform: uppercase;
   font-size: 1.2rem;
+}
+.widget-container button:hover {
+  cursor: pointer;
 }
 
 .settings label {
@@ -282,6 +293,7 @@ section {
   color: red;
 }
 .settings #timezone {
+  position: relative;
   width: 100%;
   height: 65px;
   border: 2px solid #cccccc;
@@ -290,6 +302,12 @@ section {
   color: #777;
   font-size: 1.25rem;
   margin-bottom: 20px;
+}
+.settings #timezone {
+  background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .settings .settings-button {
   display: flex;
@@ -306,6 +324,10 @@ section {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+.settings #save:hover,
+.settings #cancel:hover {
+  cursor: pointer;
+}
 .settings #save {
   background-color: #7477bf;
   color: #f7f7f7;
@@ -315,21 +337,186 @@ section {
   color: #f7f7f7;
 }
 
+@media (min-width: 430px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+  .primary-header {
+    padding: 20px;
+    height: 80px;
+  }
+  .primary-header h1 {
+    font-size: 1.75rem;
+  }
+  .primary-header h1 sup {
+    font-size: 0.7rem;
+  }
+  .primary-header .bell-container {
+    height: 50px;
+    width: 50px;
+  }
+  .primary-header .bell-container .bell-icon {
+    width: 28px;
+  }
+  .primary-header .bell-container #notifications {
+    width: 7px;
+    height: 7px;
+  }
+  .primary-header .vh {
+    height: 50px;
+  }
+  .primary-header img {
+    width: 50px;
+  }
+  .primary-header span {
+    font-size: 1.1rem;
+  }
+  nav {
+    gap: 40px;
+    height: 68px;
+  }
+  nav svg {
+    height: 40px;
+  }
+  .main-header {
+    gap: 20px;
+    height: 70px;
+    margin-left: 20px;
+  }
+  .main-header .headline {
+    font-size: 1.35rem;
+  }
+  .main-header .tab {
+    flex: 1;
+    height: 70px;
+  }
+  #alert {
+    height: 50px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  #alert span {
+    font-size: 1.25rem;
+    padding: 20px;
+  }
+  section {
+    margin: 20px;
+  }
+  .traffic .traffic-header .traffic-nav {
+    margin-bottom: 30px;
+  }
+  .traffic .traffic-header .traffic-nav .traffic-nav-link {
+    font-size: 1.25rem;
+    padding: 10px 16px;
+  }
+  .daily h3,
+  .mobile h3 {
+    margin-bottom: 30px;
+  }
+  .social h3,
+  .members h3,
+  .activity h3,
+  .message h3,
+  .settings h3 {
+    margin-bottom: 20px;
+  }
+  .social-container {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 120px;
+  }
+  .social-container .social-image {
+    width: 80px;
+    height: 80px;
+    border: 20px solid #7477bf;
+  }
+  .social-container .social-text p:first-child {
+    font-size: 1.5rem;
+  }
+  .social-container .social-text p:last-child {
+    font-size: 3rem;
+  }
+  .members hr,
+  .activity hr {
+    margin-block: 20px;
+  }
+}
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "navigation main";
   }
+  .primary-header {
+    padding: 20px 10px;
+    height: 70px;
+  }
+  .primary-header h1 {
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  .primary-header h1 sup {
+    font-size: 0.5rem;
+  }
+  .primary-header .bell-container {
+    height: 45px;
+    width: 45px;
+  }
+  .primary-header .bell-container .bell-icon {
+    width: 22px;
+  }
+  .primary-header .bell-container #notifications {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 6px;
+    right: 10px;
+  }
+  .primary-header .vh {
+    height: 42px;
+  }
+  .primary-header img {
+    width: 40px;
+  }
+  .primary-header span {
+    font-size: 0.8rem;
+  }
   nav {
     position: sticky;
-    grid-area: navigation;
-    display: flex;
+    top: 0px;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    gap: 40px;
-    background-color: #474669;
+    gap: 22px;
     height: 100vh;
+    width: 70px;
+    padding-top: 20px;
+  }
+  nav svg {
+    height: 30px;
+  }
+  main {
+    margin-left: 10px;
+  }
+  .main-header {
+    gap: 15px;
+    height: 55px;
+  }
+  .main-header .headline {
+    font-size: 1.1rem;
+  }
+  .main-header .tab {
+    height: 52px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #cccccc;
+  }
+  #alert {
+    height: 36px;
+    margin: 15px 20px;
+    border-radius: 6px;
+  }
+  #alert span {
+    font-size: 0.9rem;
+    padding: 15px;
   }
 }
 /*

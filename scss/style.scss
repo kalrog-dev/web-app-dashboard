@@ -16,6 +16,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 400;
     padding-block: 5px;
+    font-size: 0.95rem;
 }
 
 hr {
@@ -43,21 +44,22 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 20px;
-    height: 80px;
+    padding: 20px 10px;
+    height: 64px;
     background-color: $purple-light;
     color: white;
 
     h1 {
         flex: 1;
         font-weight: 400;
+        font-size: 1.35rem;
 
         strong {
             font-weight: 700;
         }
 
         sup {
-            font-size: 0.7rem;
+            font-size: 0.5rem;
         }
     }
 
@@ -66,19 +68,23 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
 
         .bell-icon {
-            width: 28px;
+            width: 22px;
             fill: $off-white;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     
         #notifications {
             position: absolute;
             background-color: #90ee90;
-            width: 7px;
-            height: 7px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             top: 4px;
             right: 8px;
@@ -86,17 +92,17 @@ body {
     }
 
     .vh {
-        height: 50px;
+        height: 40px;
         border-left: 2px solid #8387b3;
     }
 
     img {
-        width: 50px;
+        width: 38px;
         border-radius: 50%;
     }
 
     span {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -105,12 +111,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
     background-color: $puprle-dark;
-    height: 68px;
+    height: 54px;
 
     svg {
-        height: 40px;
+        height: 30px;
         fill: $off-white;
     }
 }
@@ -124,18 +130,19 @@ main {
 .main-header {
     display: flex;
     align-items: center;
-    gap: 20px;
-    height: 70px;
-    margin-left: 20px;
+    gap: 15px;
+    height: 50px;
+    margin-left: 15px;
 
     .headline {
         background-color: white;
         font-weight: 400;
+        font-size: 1.1rem;
     }
 
     .tab {
         flex: 1;
-        height: 70px;
+        height: 50px;
         background-color: $off-white;
         border: 2px solid $gray;
         border-width: 0 0 2px 2px;
@@ -143,22 +150,22 @@ main {
 }
 
 #alert {
-    height: 50px;
+    height: 36px;
     color: $off-white;
     background-color: $purple-light;
-    margin: 20px;
-    border-radius: 8px;
+    margin: 15px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     
     span {
-        font-size: 1.25rem;
-        padding: 20px;
+        font-size: 0.9rem;
+        padding: 15px;
     }
 }
 
 section {
-    margin: 20px;
+    margin: 15px;
 }
 
 .traffic {
@@ -170,14 +177,18 @@ section {
             background-color: white;
             display: flex;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             
             .traffic-nav-link {
                 background-color: transparent;
                 color: black;
-                font-size: 1.25rem;
-                padding: 10px 16px;
+                font-size: 0.95rem;
+                padding: 7px 10px;
                 border-radius: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .traffic-nav-link.active {
@@ -199,7 +210,7 @@ section {
 .mobile {
 
     h3 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .widget-container-half {
@@ -215,7 +226,7 @@ section {
 .activity h3,
 .message h3,
 .settings h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .social-container {
@@ -224,16 +235,16 @@ section {
     align-items: center;
     background-color: $off-white;
     border: 2px solid $gray;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    height: 120px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    height: 96px;
 
     .social-image {
         margin: 20px;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         background: $purple-light;
-        border: 20px solid $purple-light;
+        border: 15px solid $purple-light;
         border-radius: 50%;
     }
 
@@ -243,20 +254,22 @@ section {
     }
 
     .social-text p:first-child {
-        font-size: 1.5rem;
+        font-size: 1.05rem;
         color: $purple-light;
     }
 
     .social-text p:last-child {
-        font-size: 3rem;
+        font-size: 2.2rem;
         color: #757575;
     }
 }
 
 .members hr,
 .activity hr {
-    margin-block: 20px;
+    margin-block: 15px;
 }
+
+// Revision of 320px width ended here
 
 .members-container {
     display: flex;
@@ -295,11 +308,10 @@ section {
         border: 2px solid $gray;
         border-radius: 8px;
         padding: 10px 10px 10px 15px;
+        font-size: 1.25rem;
 
         &::placeholder {
             color: #777;
-            font-size: 1.25rem;
-
         }
     }
 
@@ -319,6 +331,10 @@ section {
         color: $off-white;
         text-transform: uppercase;
         font-size: 1.2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -337,11 +353,11 @@ section {
         span {
             flex: 1;
             color: red;
-
         }
     }
 
     #timezone {
+        position: relative;
         width: 100%;
         height: 65px;
         border: 2px solid $gray;
@@ -350,7 +366,16 @@ section {
         color: #777;
         font-size: 1.25rem;
         margin-bottom: 20px;
+
+        
     }
+
+    #timezone {
+        background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
+       -moz-appearance: none;
+       -webkit-appearance: none;
+       appearance: none;
+   }
 
     .settings-button {
         display: flex;
@@ -367,6 +392,10 @@ section {
         font-size: 1.25rem;
         margin-bottom: 5px;
         text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     #save {
@@ -380,6 +409,148 @@ section {
     }
 }
 
+@media (min-width: 430px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .primary-header {
+        padding: 20px;
+        height: 80px;
+    
+        h1 {
+            font-size: 1.75rem;
+
+            sup {
+                font-size: 0.7rem;
+            }
+        }
+    
+        .bell-container {
+            height: 50px;
+            width: 50px;
+    
+            .bell-icon {
+                width: 28px;
+            }
+        
+            #notifications {
+                width: 7px;
+                height: 7px;
+            }
+        }
+    
+        .vh {
+            height: 50px;
+        }
+    
+        img {
+            width: 50px;
+        }
+    
+        span {
+            font-size: 1.1rem;
+        }
+    }
+
+    nav {
+        gap: 40px;
+        height: 68px;
+    
+        svg {
+            height: 40px;
+        }
+    }
+
+    .main-header {
+        gap: 20px;
+        height: 70px;
+        margin-left: 20px;
+    
+        .headline {
+            font-size: 1.35rem;
+        }
+    
+        .tab {
+            flex: 1;
+            height: 70px;
+        }
+    }
+
+    #alert {
+        height: 50px;
+        margin: 20px;
+        border-radius: 8px;
+        
+        span {
+            font-size: 1.25rem;
+            padding: 20px;
+        }
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    .traffic {
+
+        .traffic-header {
+    
+            .traffic-nav {
+                margin-bottom: 30px;
+                
+                .traffic-nav-link {
+                    font-size: 1.25rem;
+                    padding: 10px 16px;
+                }
+            }
+        }
+    }
+
+    .daily,
+    .mobile {
+
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .social h3,
+    .members h3,
+    .activity h3,
+    .message h3,
+    .settings h3 {
+        margin-bottom: 20px;
+    }
+
+    .social-container {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        height: 120px;
+    
+        .social-image {
+            width: 80px;
+            height: 80px;
+            border: 20px solid $purple-light;
+        }
+    
+        .social-text p:first-child {
+            font-size: 1.5rem;
+        }
+    
+        .social-text p:last-child {
+            font-size: 3rem;
+        }
+    }
+
+    .members hr,
+    .activity hr {
+        margin-block: 20px;
+    }
+
+    
+}
+
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
@@ -388,17 +559,96 @@ section {
             "navigation main";
     }
 
+    .primary-header {
+        padding: 20px 10px;
+        height: 70px;
+    
+        h1 {
+            font-weight: 400;
+            font-size: 1.3rem;
+    
+            sup {
+                font-size: 0.5rem;
+            }
+        }
+    
+        .bell-container {
+            height: 45px;
+            width: 45px;
+    
+            .bell-icon {
+                width: 22px;
+            }
+        
+            #notifications {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                top: 6px;
+                right: 10px;
+            }
+        }
+    
+        .vh {
+            height: 42px;
+        }
+    
+        img {
+            width: 40px;
+        }
+    
+        span {
+            font-size: 0.8rem;
+        }
+    }
+
     nav {
         position: sticky;
-        grid-area: navigation;
-        display: flex;
+        top: 0px;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        gap: 40px;
-        background-color: $puprle-dark;
+        gap: 22px;
         height: 100vh;
+        width: 70px;
+        padding-top: 20px;
+
+        svg {
+            height: 30px;
+        }
     }
+
+    main {
+        margin-left: 10px;
+    }
+
+    .main-header {
+        gap: 15px;
+        height: 55px;
+    
+        .headline {
+            font-size: 1.1rem;
+        }
+    
+        .tab {
+            height: 52px;
+            border-width: 0 0 1px 1px;
+            border-style: solid;
+            border-color: $gray;
+        }
+    }
+
+    #alert {
+        height: 36px;
+        margin: 15px 20px;
+        border-radius: 6px;
+        
+        span {
+            font-size: 0.9rem;
+            padding: 15px;
+        }
+    }
+
+
 }
 
 /*

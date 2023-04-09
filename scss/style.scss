@@ -145,8 +145,9 @@ main {
         flex: 1;
         height: 50px;
         background-color: $off-white;
-        border: 2px solid $gray;
-        border-width: 0 0 2px 2px;
+        border-width: 0 0 1px 1px;
+        border-style: solid;
+        border-color: $gray;
     }
 }
 
@@ -308,9 +309,11 @@ section {
         border-radius: 5px;
         padding: 8px 8px 8px 10px;
         font-size: 0.95rem;
+        font-family: sans-serif;
 
         &::placeholder {
             color: #777;
+            font-size: 0.95rem;
         }
     }
 
@@ -351,6 +354,7 @@ section {
 
         span {
             flex: 1;
+            max-width: 75px;
         }
     }
 
@@ -366,6 +370,7 @@ section {
         margin-bottom: 15px;
         margin-top: 10px;
         background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
+        background-color: $off-white;
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
@@ -559,6 +564,10 @@ section {
             border-radius: 8px;
             padding: 10px 10px 10px 15px;
             font-size: 1.25rem;
+
+            &::placeholder {
+                font-size: 1.25rem;
+            }
         }
     
         input,
@@ -581,6 +590,10 @@ section {
         label {
             margin-bottom: 20px;
             font-size: 1.1rem;
+
+            span {
+                max-width: 90px;
+            }
         }
     
         #timezone {
@@ -588,7 +601,9 @@ section {
             font-size: 1.25rem;
             margin-bottom: 20px;
             margin-top: 0px;
-            
+            background: url(../img/svg/triangle.svg) no-repeat 97% 50%;
+            background-size: 15px;
+            background-color: $off-white;
         }
     
         .settings-button {
@@ -870,7 +885,11 @@ section {
             height: 45px;
             border-radius: 5px;
             padding: 8px 8px 8px 12px;
-            font-size: 1rem;
+            font-size: 0.9rem;
+
+            &::placeholder {
+                font-size: 0.9rem;
+            }
         }
     
         input,
@@ -892,36 +911,15 @@ section {
     .settings {
 
         label {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            display: flex;
             margin-bottom: 20px;
             font-size: 0.9rem;
-
-            strong {
-                grid-column: 1 / span 3;
-            }
+            width: 300px;
 
             span {
-                grid-column: 4 / span 1;
+                max-width: 75px;
             }
         }
-
-        /*
-        label {
-            display: flex;
-            align-items: center;
-            margin-bottom: 22px;
-            font-size: 0.95rem;
-    
-            strong {
-                flex: 3;
-            }
-    
-            span {
-                flex: 1;
-            }
-        }
-        */
     
         #timezone {
             height: 45px;

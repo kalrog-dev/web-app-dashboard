@@ -13,6 +13,7 @@ h3 {
 
 hr {
   border: 1px solid #cccccc;
+  border-bottom: none;
 }
 
 body {
@@ -190,7 +191,7 @@ section {
   justify-content: flex-start;
   align-items: center;
   background-color: #f7f7f7;
-  border: 2px solid #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 6px;
   margin-bottom: 15px;
   height: 96px;
@@ -249,7 +250,7 @@ section {
 .widget-container button {
   width: 100%;
   height: 45px;
-  border: 2px solid #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 8px 8px 8px 10px;
   font-size: 0.95rem;
@@ -296,15 +297,13 @@ section {
   position: relative;
   width: 100%;
   height: 48px;
-  border: 2px solid #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 8px;
   padding: 10px 10px 10px 15px;
   color: #777;
   font-size: 0.95rem;
   margin-bottom: 15px;
   margin-top: 10px;
-}
-.settings #timezone {
   background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -319,7 +318,7 @@ section {
 .settings #cancel {
   flex: 1;
   height: 45px;
-  border: 2px solid #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   font-size: 0.95rem;
   margin-bottom: 5px;
@@ -491,6 +490,9 @@ section {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "navigation main";
   }
+  h3 {
+    font-size: 0.9rem;
+  }
   .primary-header {
     padding: 20px 10px;
     height: 70px;
@@ -547,7 +549,7 @@ section {
     grid-column: 1/span 6;
   }
   main .daily + hr {
-    display: none;
+    grid-row: 1;
   }
   main .main-header,
   main #alert,
@@ -605,5 +607,149 @@ section {
   #alert span {
     font-size: 0.9rem;
     padding: 15px;
+  }
+  section {
+    margin: 5px 20px;
+  }
+  .traffic {
+    margin-block: 5px 10px;
+  }
+  .traffic .traffic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .traffic .traffic-header .traffic-nav {
+    margin-bottom: 0px;
+  }
+  .traffic .traffic-header .traffic-nav .traffic-nav-link {
+    font-size: 0.95rem;
+    padding: 6px 11px;
+  }
+  .traffic .traffic-header .traffic-nav .traffic-nav-link:last-of-type {
+    padding-right: 0;
+  }
+  .daily h3,
+  .mobile h3 {
+    margin-bottom: 20px;
+  }
+  .daily {
+    margin-right: 0;
+    margin-block: 0;
+    padding-right: 20px;
+    padding-block: 5px;
+    border-right: 1px solid #ccc;
+  }
+  .social h3 {
+    margin-bottom: -5px;
+  }
+  .social-container {
+    border-radius: 6px;
+    margin-bottom: 10px;
+    height: 95px;
+  }
+  .social-container .social-image {
+    width: 60px;
+    height: 60px;
+    border: 15px solid #7477bf;
+  }
+  .social-container .social-text p:first-child {
+    font-size: 1.05rem;
+  }
+  .social-container .social-text p:last-child {
+    font-size: 2rem;
+  }
+  .members hr,
+  .activity hr {
+    margin-block: 10px;
+  }
+  .members h3,
+  .activity h3,
+  .message h3 {
+    margin-bottom: 10px;
+  }
+  .members-container {
+    flex-direction: row;
+    justify-content: inherit;
+    padding-inline: 0px;
+    font-size: 0.9rem;
+  }
+  .members-container .profile-image {
+    width: 60px;
+  }
+  .members-container .members-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .widget-container input,
+  .widget-container textarea,
+  .widget-container button {
+    height: 45px;
+    border-radius: 5px;
+    padding: 8px 8px 8px 12px;
+    font-size: 1rem;
+  }
+  .widget-container input,
+  .widget-container textarea {
+    margin-bottom: 15px;
+  }
+  .widget-container textarea {
+    height: 130px;
+  }
+  .widget-container button {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .settings {
+    /*
+    label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 22px;
+        font-size: 0.95rem;
+
+        strong {
+            flex: 3;
+        }
+
+        span {
+            flex: 1;
+        }
+    }
+    */
+  }
+  .settings label {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  .settings label strong {
+    grid-column: 1/span 3;
+  }
+  .settings label span {
+    grid-column: 4/span 1;
+  }
+  .settings #timezone {
+    height: 45px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    border-radius: 5px;
+    background: url(../img/svg/triangle.svg) no-repeat 98% 50%;
+    background-size: 13px;
+    background-color: #f7f7f7;
+  }
+  .settings .settings-button {
+    gap: 15px;
+  }
+  .settings #save,
+  .settings #cancel {
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

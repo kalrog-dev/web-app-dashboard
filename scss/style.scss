@@ -21,6 +21,7 @@ h3 {
 
 hr {
     border: 1px solid $gray;
+    border-bottom: none;
 }
 
 body {
@@ -234,7 +235,7 @@ section {
     justify-content: flex-start;
     align-items: center;
     background-color: $off-white;
-    border: 2px solid $gray;
+    border: 1px solid $gray;
     border-radius: 6px;
     margin-bottom: 15px;
     height: 96px;
@@ -303,7 +304,7 @@ section {
     button {
         width: 100%;
         height: 45px;
-        border: 2px solid $gray;
+        border: 1px solid $gray;
         border-radius: 5px;
         padding: 8px 8px 8px 10px;
         font-size: 0.95rem;
@@ -357,36 +358,32 @@ section {
         position: relative;
         width: 100%;
         height: 48px;
-        border: 2px solid $gray;
+        border: 1px solid $gray;
         border-radius: 8px;
         padding: 10px 10px 10px 15px;
         color: #777;
         font-size: 0.95rem;
         margin-bottom: 15px;
         margin-top: 10px;
-        
-    }
-
-    #timezone {
         background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
-       -moz-appearance: none;
-       -webkit-appearance: none;
-       appearance: none;
-   }
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
 
     .settings-button {
         display: flex;
         justify-content: space-around;
-        gap: 15px;                      //20px
+        gap: 15px;
     }
 
     #save,
     #cancel {
         flex: 1;
-        height: 45px;                   //65px
-        border: 2px solid $gray;
-        border-radius: 5px;             //8px
-        font-size: 0.95rem;             //1.25rem
+        height: 45px;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        font-size: 0.95rem;
         margin-bottom: 5px;
         text-transform: uppercase;
 
@@ -615,6 +612,10 @@ section {
             "navigation main";
     }
 
+    h3 {
+        font-size: 0.9rem;
+    }
+
     .primary-header {
         padding: 20px 10px;
         height: 70px;
@@ -673,7 +674,9 @@ section {
         }
     }
 
+    // Grid
     main {
+        //Grid layout start
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         margin-left: 10px;
@@ -683,10 +686,9 @@ section {
         }
 
         .daily + hr {
-            display: none;
+            grid-row: 1;
         }
 
-        //Grid layout
         .main-header,
         #alert,
         .traffic {
@@ -734,6 +736,7 @@ section {
         .settings {
             grid-column: 1 / span 6;
         }
+        // Grid layout end
     }
 
     .main-header {
@@ -763,7 +766,186 @@ section {
         }
     }
 
+    section {
+        margin: 5px 20px;   //20px
+    }
 
+    .traffic {
+        margin-block: 5px 10px;
+
+        .traffic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;  
+            margin-bottom: 20px;
+
+            .traffic-nav {
+                margin-bottom: 0px;
+
+                .traffic-nav-link {
+                    font-size: 0.95rem;
+                    padding: 6px 11px;
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .daily,
+    .mobile {
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .daily {
+        margin-right: 0;
+        margin-block: 0;
+        padding-right: 20px;
+        padding-block: 5px;
+        border-right: 1px solid #ccc;
+    }
+
+    .social h3 {
+        margin-bottom: -5px;
+    }
+
+    .social-container {
+        border-radius: 6px;
+        margin-bottom: 10px;
+        height: 95px;
+    
+        .social-image {
+            width: 60px;
+            height: 60px;
+            border: 15px solid $purple-light;
+        }
+    
+        .social-text p:first-child {
+            font-size: 1.05rem;
+        }
+    
+        .social-text p:last-child {
+            font-size: 2rem;
+        }
+    }
+
+    .members hr,
+    .activity hr {
+        margin-block: 10px;
+    }
+
+    .members h3,
+    .activity h3,
+    .message h3 {
+        margin-bottom: 10px;
+    }
+
+    .members-container {
+        flex-direction: row;
+        justify-content: inherit;
+        padding-inline: 0px;    //35px
+        font-size: 0.9rem;
+    
+        .profile-image {
+            width: 60px;
+        }
+
+        .members-text {
+            flex: 1;
+            text-align: left;
+            margin-left: 15px;
+        }
+    }
+
+    .widget-container {
+        input,
+        textarea,
+        button {
+            height: 45px;
+            border-radius: 5px;
+            padding: 8px 8px 8px 12px;
+            font-size: 1rem;
+        }
+    
+        input,
+        textarea {
+            margin-bottom: 15px;
+    
+        }
+    
+        textarea {
+            height: 130px;
+        }
+    
+        button {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    .settings {
+
+        label {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+
+            strong {
+                grid-column: 1 / span 3;
+            }
+
+            span {
+                grid-column: 4 / span 1;
+            }
+        }
+
+        /*
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+            font-size: 0.95rem;
+    
+            strong {
+                flex: 3;
+            }
+    
+            span {
+                flex: 1;
+            }
+        }
+        */
+    
+        #timezone {
+            height: 45px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            margin-top: 0px;
+            border-radius: 5px;
+            background: url(../img/svg/triangle.svg) no-repeat 98% 50%;
+            background-size: 13px;
+            background-color: $off-white;
+        }
+    
+        .settings-button {
+            gap: 15px;
+        }
+    
+        #save,
+        #cancel {
+            height: 45px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 

@@ -269,17 +269,16 @@ section {
     margin-block: 15px;
 }
 
-// Revision of 320px width ended here
-
 .members-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-inline: 35px;
+    padding-inline: 15px;
+    font-size: 0.8rem;
 
     .profile-image {
-        width: 85px;
+        width: 60px;
         border-radius: 50%;
         margin-bottom: 6px;
     }
@@ -296,7 +295,6 @@ section {
             font-weight: 500;
         }
     }
-    
 }
 
 .widget-container {
@@ -304,11 +302,11 @@ section {
     textarea,
     button {
         width: 100%;
-        height: 65px;
+        height: 45px;
         border: 2px solid $gray;
-        border-radius: 8px;
-        padding: 10px 10px 10px 15px;
-        font-size: 1.25rem;
+        border-radius: 5px;
+        padding: 8px 8px 8px 10px;
+        font-size: 0.95rem;
 
         &::placeholder {
             color: #777;
@@ -317,20 +315,20 @@ section {
 
     input,
     textarea {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         background-color: $off-white;
 
     }
 
     textarea {
-        height: 190px;
+        height: 135px;
     }
 
     button {
         background-color: $purple-light;
         color: $off-white;
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 0.95rem;
 
         &:hover {
             cursor: pointer;
@@ -343,8 +341,8 @@ section {
     label {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
-        font-size: 1.1rem;
+        margin-bottom: 22px;
+        font-size: 0.95rem;
 
         strong {
             flex: 3;
@@ -352,21 +350,20 @@ section {
 
         span {
             flex: 1;
-            color: red;
         }
     }
 
     #timezone {
         position: relative;
         width: 100%;
-        height: 65px;
+        height: 48px;
         border: 2px solid $gray;
         border-radius: 8px;
         padding: 10px 10px 10px 15px;
         color: #777;
-        font-size: 1.25rem;
-        margin-bottom: 20px;
-
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        margin-top: 10px;
         
     }
 
@@ -380,16 +377,16 @@ section {
     .settings-button {
         display: flex;
         justify-content: space-around;
-        gap: 20px;
+        gap: 15px;                      //20px
     }
 
     #save,
     #cancel {
         flex: 1;
-        height: 65px;
+        height: 45px;                   //65px
         border: 2px solid $gray;
-        border-radius: 8px;
-        font-size: 1.25rem;
+        border-radius: 5px;             //8px
+        font-size: 0.95rem;             //1.25rem
         margin-bottom: 5px;
         text-transform: uppercase;
 
@@ -548,7 +545,66 @@ section {
         margin-block: 20px;
     }
 
+    .members-container {
+        padding-inline: 35px;
+        font-size: 1rem;
     
+        .profile-image {
+            width: 85px;
+        }
+    }
+
+    .widget-container {
+        input,
+        textarea,
+        button {
+            height: 65px;
+            border-radius: 8px;
+            padding: 10px 10px 10px 15px;
+            font-size: 1.25rem;
+        }
+    
+        input,
+        textarea {
+            margin-bottom: 20px;
+    
+        }
+    
+        textarea {
+            height: 190px;
+        }
+    
+        button {
+            font-size: 1.2rem;
+        }
+    }
+
+    .settings {
+
+        label {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+    
+        #timezone {
+            height: 65px;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            
+        }
+    
+        .settings-button {
+            gap: 20px;
+        }
+    
+        #save,
+        #cancel {
+            height: 65px;
+            border-radius: 8px;
+            font-size: 1.25rem;
+        }
+    }
 }
 
 @media (min-width: 768px) {

@@ -225,10 +225,11 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-inline: 35px;
+  padding-inline: 15px;
+  font-size: 0.8rem;
 }
 .members-container .profile-image {
-  width: 85px;
+  width: 60px;
   border-radius: 50%;
   margin-bottom: 6px;
 }
@@ -247,11 +248,11 @@ section {
 .widget-container textarea,
 .widget-container button {
   width: 100%;
-  height: 65px;
+  height: 45px;
   border: 2px solid #cccccc;
-  border-radius: 8px;
-  padding: 10px 10px 10px 15px;
-  font-size: 1.25rem;
+  border-radius: 5px;
+  padding: 8px 8px 8px 10px;
+  font-size: 0.95rem;
 }
 .widget-container input::-moz-placeholder, .widget-container textarea::-moz-placeholder, .widget-container button::-moz-placeholder {
   color: #777;
@@ -263,17 +264,17 @@ section {
 }
 .widget-container input,
 .widget-container textarea {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: #f7f7f7;
 }
 .widget-container textarea {
-  height: 190px;
+  height: 135px;
 }
 .widget-container button {
   background-color: #7477bf;
   color: #f7f7f7;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
 .widget-container button:hover {
   cursor: pointer;
@@ -282,26 +283,26 @@ section {
 .settings label {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  margin-bottom: 22px;
+  font-size: 0.95rem;
 }
 .settings label strong {
   flex: 3;
 }
 .settings label span {
   flex: 1;
-  color: red;
 }
 .settings #timezone {
   position: relative;
   width: 100%;
-  height: 65px;
+  height: 48px;
   border: 2px solid #cccccc;
   border-radius: 8px;
   padding: 10px 10px 10px 15px;
   color: #777;
-  font-size: 1.25rem;
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 .settings #timezone {
   background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
@@ -312,15 +313,15 @@ section {
 .settings .settings-button {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 15px;
 }
 .settings #save,
 .settings #cancel {
   flex: 1;
-  height: 65px;
+  height: 45px;
   border: 2px solid #cccccc;
-  border-radius: 8px;
-  font-size: 1.25rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
@@ -439,6 +440,50 @@ section {
   .members hr,
   .activity hr {
     margin-block: 20px;
+  }
+  .members-container {
+    padding-inline: 35px;
+    font-size: 1rem;
+  }
+  .members-container .profile-image {
+    width: 85px;
+  }
+  .widget-container input,
+  .widget-container textarea,
+  .widget-container button {
+    height: 65px;
+    border-radius: 8px;
+    padding: 10px 10px 10px 15px;
+    font-size: 1.25rem;
+  }
+  .widget-container input,
+  .widget-container textarea {
+    margin-bottom: 20px;
+  }
+  .widget-container textarea {
+    height: 190px;
+  }
+  .widget-container button {
+    font-size: 1.2rem;
+  }
+  .settings label {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  .settings #timezone {
+    height: 65px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .settings .settings-button {
+    gap: 20px;
+  }
+  .settings #save,
+  .settings #cancel {
+    height: 65px;
+    border-radius: 8px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {

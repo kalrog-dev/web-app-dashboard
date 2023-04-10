@@ -66,9 +66,22 @@ body {
 .primary-header .bell-container .bell-icon {
   width: 22px;
   fill: #f7f7f7;
+  transform-origin: center top;
 }
 .primary-header .bell-container .bell-icon:hover {
   cursor: pointer;
+  animation: bell-animation 0.8s ease-out;
+}
+@keyframes bell-animation {
+  30% {
+    transform: rotate(8deg);
+  }
+  70% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .primary-header .bell-container #notifications {
   position: absolute;

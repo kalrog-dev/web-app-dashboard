@@ -80,9 +80,25 @@ body {
         .bell-icon {
             width: 22px;
             fill: $off-white;
+            transform-origin: center top;
 
             &:hover {
                 cursor: pointer;
+                animation: bell-animation 0.8s ease-out;
+            }
+
+            @keyframes bell-animation {
+                30% {
+                    transform: rotate(8deg);
+                }
+
+                70% {
+                    transform: rotate(-6deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
             }
         }
     

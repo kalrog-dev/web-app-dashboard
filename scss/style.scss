@@ -341,7 +341,11 @@ section {
     }
 
     textarea {
-        height: 135px;
+        height: 130px;
+        min-height: 130px;
+        max-height: 180px;
+        min-width: 100%;
+        max-width: 100%;
     }
 
     button {
@@ -589,6 +593,10 @@ section {
     
         textarea {
             height: 190px;
+            min-height: 190px;
+            max-height: 250px;
+            min-width: 100%;
+            max-width: 100%;
         }
     
         button {
@@ -921,6 +929,10 @@ section {
     
         textarea {
             height: 130px;
+            min-height: 130px;
+            max-height: 180px;
+            min-width: 100%;
+            max-width: 100%;
         }
     
         button {

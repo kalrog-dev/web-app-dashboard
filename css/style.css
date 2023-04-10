@@ -293,7 +293,11 @@ section {
   background-color: #f7f7f7;
 }
 .widget-container textarea {
-  height: 135px;
+  height: 130px;
+  min-height: 130px;
+  max-height: 180px;
+  min-width: 100%;
+  max-width: 100%;
 }
 .widget-container button {
   background-color: #7477bf;
@@ -491,6 +495,10 @@ section {
   }
   .widget-container textarea {
     height: 190px;
+    min-height: 190px;
+    max-height: 250px;
+    min-width: 100%;
+    max-width: 100%;
   }
   .widget-container button {
     font-size: 1.2rem;
@@ -749,6 +757,10 @@ section {
   }
   .widget-container textarea {
     height: 130px;
+    min-height: 130px;
+    max-height: 180px;
+    min-width: 100%;
+    max-width: 100%;
   }
   .widget-container button {
     font-size: 1rem;

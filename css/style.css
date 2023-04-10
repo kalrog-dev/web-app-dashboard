@@ -692,9 +692,6 @@ section {
     font-size: 0.95rem;
     padding: 6px 11px;
   }
-  .traffic .traffic-header .traffic-nav .traffic-nav-link:last-of-type {
-    padding-right: 0;
-  }
   .daily h3,
   .mobile h3 {
     margin-bottom: 20px;

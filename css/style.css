@@ -596,7 +596,7 @@ section {
     grid-row: 1;
   }
   main .main-header,
-  main #alert,
+  main .alert-container,
   main .traffic {
     grid-column: 1/span 6;
   }

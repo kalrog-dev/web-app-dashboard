@@ -726,7 +726,7 @@ section {
         }
 
         .main-header,
-        #alert,
+        .alert-container,
         .traffic {
             grid-column: 1 / span 6;
         }
@@ -885,7 +885,7 @@ section {
     .members-container {
         flex-direction: row;
         justify-content: inherit;
-        padding-inline: 0px;    //35px
+        padding-inline: 0px;
         font-size: 0.9rem;
     
         .profile-image {

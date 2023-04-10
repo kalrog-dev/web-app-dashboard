@@ -21,6 +21,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -175,17 +180,23 @@ section {
   background-color: #81c98f;
   color: white;
 }
-.traffic .widget-container-full img {
-  width: 100%;
+.traffic .widget-container-full {
+  display: grid;
+  gap: 0.1rem;
+  grid-template-rows: min-content minmax(0, 1fr) min-content;
+  grid-template-columns: 1fr minmax(0, 3fr);
 }
 
 .daily h3,
 .mobile h3 {
   margin-bottom: 20px;
 }
-.daily .widget-container-half img,
-.mobile .widget-container-half img {
-  width: 100%;
+.daily .widget-container-half,
+.mobile .widget-container-half {
+  display: grid;
+  gap: 0.1rem;
+  grid-template-rows: min-content minmax(0, 1fr) min-content;
+  grid-template-columns: 1fr minmax(0, 3fr);
 }
 
 .social h3,
@@ -777,10 +788,6 @@ section {
   body {
     background-color: #32324a;
   }
-  .wrapper {
-    max-width: 1440px;
-    margin: auto;
-  }
   main .members,
   main .message {
     grid-column: 1/span 3;
@@ -795,14 +802,6 @@ section {
   main .settings {
     grid-row: 12;
   }
-  /*
-  .widget-container-full {
-      width: 90vw;
-      }
-  .widget-container-half {
-      width: 45vw;
-  }
-  */
   .members,
   .message {
     margin-right: 0;

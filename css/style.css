@@ -127,18 +127,27 @@ main {
   border-color: #cccccc;
 }
 
-#alert {
+.alert-banner {
   height: 36px;
   color: #f7f7f7;
   background-color: #7477bf;
   margin: 15px;
+  padding-block: 25px;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-#alert span {
+.alert-banner p {
   font-size: 0.9rem;
   padding: 15px;
+}
+.alert-banner p:last-child {
+  padding: 5px;
+  margin-right: 10px;
+}
+.alert-banner p:last-child:hover {
+  cursor: pointer;
 }
 
 section {
@@ -343,6 +352,11 @@ section {
   color: #f7f7f7;
 }
 
+@media (min-width: 380px) {
+  .alert-banner {
+    padding-block: 0px;
+  }
+}
 @media (min-width: 430px) {
   h3 {
     font-size: 1.2rem;
@@ -395,15 +409,6 @@ section {
   .main-header .tab {
     flex: 1;
     height: 70px;
-  }
-  #alert {
-    height: 50px;
-    margin: 20px;
-    border-radius: 8px;
-  }
-  #alert span {
-    font-size: 1.25rem;
-    padding: 20px;
   }
   section {
     margin: 20px;
@@ -502,6 +507,14 @@ section {
   .settings #cancel {
     height: 65px;
     border-radius: 8px;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 550px) {
+  .alert-banner {
+    height: 50px;
+  }
+  .alert-banner p {
     font-size: 1.25rem;
   }
 }
@@ -619,12 +632,12 @@ section {
     border-style: solid;
     border-color: #cccccc;
   }
-  #alert {
+  .alert-banner {
     height: 36px;
     margin: 15px 20px;
     border-radius: 6px;
   }
-  #alert span {
+  .alert-banner p {
     font-size: 0.9rem;
     padding: 15px;
   }
@@ -758,5 +771,70 @@ section {
     border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background-color: #32324a;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+  main .members,
+  main .message {
+    grid-column: 1/span 3;
+  }
+  main .activity {
+    grid-row: 10;
+  }
+  main .activity,
+  main .settings {
+    grid-column: 4/span 3;
+  }
+  main .settings {
+    grid-row: 12;
+  }
+  /*
+  .widget-container-full {
+      width: 90vw;
+      }
+  .widget-container-half {
+      width: 45vw;
+  }
+  */
+  .members,
+  .message {
+    margin-right: 0;
+    margin-block: 0;
+    padding-right: 20px;
+    padding-block: 5px;
+    border-right: 1px solid #ccc;
+  }
+  .last-members-hr {
+    display: none;
+  }
+  .settings {
+    margin-block: 0;
+    padding-block: 5px;
+    position: relative;
+  }
+  .settings label {
+    margin-bottom: 32px;
+  }
+  .settings #timezone {
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+  }
+  .settings .settings-button {
+    gap: 15px;
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+  }
+  .settings #save,
+  .settings #cancel {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

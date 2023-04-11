@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h3 {
@@ -378,6 +379,10 @@ section {
 .settings #cancel {
   background-color: #999999;
   color: #f7f7f7;
+}
+
+.toast-container {
+  display: none;
 }
 
 @media (min-width: 380px) {

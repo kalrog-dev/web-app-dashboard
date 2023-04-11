@@ -232,3 +232,28 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+//Save settings to local storage
+const emailCheckbox = document.getElementById("email-checkbox");
+const publicCheckbox = document.getElementById("public-checkbox");
+const timezone = document.getElementById("timezone");
+const save = document.getElementById("save");
+const cancel = document.getElementById("cancel");
+
+save.addEventListener('click', () => {
+    localStorage.setItem("Email", String(emailCheckbox.checked));
+    localStorage.setItem("Public", String(publicCheckbox.checked));
+    localStorage.setItem("Timezone", timezone.selectedIndex);
+});
+
+cancel.addEventListener('click', () => {
+    localStorage.clear();
+    emailCheckbox.checked = false;
+    publicCheckbox.checked = false;
+    timezone.selectedIndex = 0;
+});
+
+//Update on reload
+emailCheckbox.checked = localStorage.getItem("Email") === "true";
+publicCheckbox.checked = localStorage.getItem("Public") === "true";
+timezone.selectedIndex = Number(localStorage.getItem("Timezone"));

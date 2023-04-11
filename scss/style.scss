@@ -10,6 +10,7 @@ $gray: #cccccc;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 h3 {
@@ -442,6 +443,10 @@ section {
         background-color: #999999;
         color: $off-white;
     }
+}
+
+.toast-container {
+    display: none;
 }
 
 @media (min-width: 380px) {

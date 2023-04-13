@@ -61,6 +61,11 @@ body {
         font-weight: 400;
         font-size: 1.35rem;
 
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
         strong {
             font-weight: 700;
         }
@@ -551,6 +556,10 @@ section {
         .bell-container {
             height: 50px;
             width: 50px;
+
+            #show-notif {
+                top: 54px;
+            }
     
             .bell-icon {
                 width: 28px;
@@ -773,6 +782,10 @@ section {
         .bell-container {
             height: 45px;
             width: 45px;
+
+            #show-notif {
+                top: 44px;
+            }
     
             .bell-icon {
                 width: 22px;

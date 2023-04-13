@@ -50,6 +50,10 @@ body {
   font-weight: 400;
   font-size: 1.35rem;
 }
+.primary-header h1 a {
+  text-decoration: none;
+  color: white;
+}
 .primary-header h1 strong {
   font-weight: 700;
 }
@@ -475,6 +479,9 @@ section {
     height: 50px;
     width: 50px;
   }
+  .primary-header .bell-container #show-notif {
+    top: 54px;
+  }
   .primary-header .bell-container .bell-icon {
     width: 28px;
   }
@@ -644,6 +651,9 @@ section {
   .primary-header .bell-container {
     height: 45px;
     width: 45px;
+  }
+  .primary-header .bell-container #show-notif {
+    top: 44px;
   }
   .primary-header .bell-container .bell-icon {
     width: 22px;

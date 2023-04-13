@@ -32,10 +32,10 @@ let trafficData = {
 };
 
 //Update line chart
-const hourly = document.getElementById("hourly");
-const daily = document.getElementById("daily");
-const weekly = document.getElementById("weekly");
-const monthly = document.getElementById("monthly");
+const hourly = document.getElementById("hourly-li");
+const daily = document.getElementById("daily-li");
+const weekly = document.getElementById("weekly-li");
+const monthly = document.getElementById("monthly-li");
 
 let newData = {
     labels: [
@@ -358,4 +358,24 @@ function autocomplete(inp, arr) {
   });
 }
 
-autocomplete(document.getElementById("myInput"), users);
+autocomplete(document.getElementById("userField"), users);
+
+//Notifications
+const notif = document.getElementById("show-notif");
+const bell = document.getElementById("bell-icon");
+const notifDot = document.getElementById("notifications");
+let viewed = false;
+
+bell.addEventListener("click", () => {
+    if (notif.style.display == "flex") {
+        notif.style.display = "none";
+        viewed = true;
+    } else {
+        notif.style.display = "flex";
+    }
+
+    if (viewed) {
+        notifDot.style.display = "none";
+    }
+})
+

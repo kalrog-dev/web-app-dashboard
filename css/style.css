@@ -64,6 +64,44 @@ body {
   height: 40px;
   width: 40px;
 }
+.primary-header .bell-container #show-notif {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  margin-inline: auto;
+  top: 40px;
+  left: -110px;
+  background-color: #f7f7f7;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid #ccc;
+}
+.primary-header .bell-container #show-notif .notif1,
+.primary-header .bell-container #show-notif .notif2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+}
+.primary-header .bell-container #show-notif .notif1 {
+  border-bottom: 1px solid #ccc;
+}
+.primary-header .bell-container #show-notif img {
+  height: 50px;
+  width: 50px;
+}
+.primary-header .bell-container #show-notif .notif-text {
+  color: black;
+  font-size: 0.9rem;
+}
+.primary-header .bell-container #show-notif .notif-text p:nth-child(2) {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
 .primary-header .bell-container .bell-icon {
   width: 22px;
   fill: #f7f7f7;

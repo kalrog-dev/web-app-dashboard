@@ -379,6 +379,10 @@ section {
             font-weight: 500;
         }
     }
+
+    .arrow {
+        display: none;
+     }
 }
 
 .widget-container {
@@ -1007,6 +1011,14 @@ section {
             text-align: left;
             margin-left: 15px;
         }
+
+        .arrow {
+            display: block;
+            color: $purple-light;
+            font-size: 1.35rem;
+            margin-left: 10px;
+            cursor: default;
+         }
     }
 
     .widget-container {

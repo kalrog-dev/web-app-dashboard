@@ -321,6 +321,9 @@ section {
 .members-container .members-text strong {
   font-weight: 500;
 }
+.members-container .arrow {
+  display: none;
+}
 
 .widget-container .autocomplete {
   position: relative;
@@ -826,6 +829,13 @@ section {
     flex: 1;
     text-align: left;
     margin-left: 15px;
+  }
+  .members-container .arrow {
+    display: block;
+    color: #7477bf;
+    font-size: 1.35rem;
+    margin-left: 10px;
+    cursor: default;
   }
   .widget-container input,
   .widget-container textarea,

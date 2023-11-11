@@ -365,10 +365,6 @@ section {
   font-size: 0.95rem;
   font-family: sans-serif;
 }
-.widget-container input::-moz-placeholder, .widget-container textarea::-moz-placeholder, .widget-container button::-moz-placeholder {
-  color: #777;
-  font-size: 0.95rem;
-}
 .widget-container input::placeholder,
 .widget-container textarea::placeholder,
 .widget-container button::placeholder {
@@ -574,9 +570,6 @@ section {
     height: 65px;
     border-radius: 8px;
     padding: 10px 10px 10px 15px;
-    font-size: 1.25rem;
-  }
-  .widget-container input::-moz-placeholder, .widget-container textarea::-moz-placeholder, .widget-container button::-moz-placeholder {
     font-size: 1.25rem;
   }
   .widget-container input::placeholder,
@@ -845,9 +838,6 @@ section {
     padding: 8px 8px 8px 12px;
     font-size: 0.9rem;
   }
-  .widget-container input::-moz-placeholder, .widget-container textarea::-moz-placeholder, .widget-container button::-moz-placeholder {
-    font-size: 0.9rem;
-  }
   .widget-container input::placeholder,
   .widget-container textarea::placeholder,
   .widget-container button::placeholder {
@@ -950,4 +940,6 @@ section {
   .settings #cancel {
     margin-bottom: 0px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -13,36 +13,31 @@ let trafficData = {
   }]
 };
 
-//Update line chart
-const hourly = document.getElementById("hourly-li");
-const daily = document.getElementById("daily-li");
-const weekly = document.getElementById("weekly-li");
-const monthly = document.getElementById("monthly-li");
-
+// Data to display one of four different line charts
 let newData = {
   labels: [
-    //Hourly
+    //Hourly line chart
     ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
     "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
-    //Daily
+    //Daily line chart
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", 
     "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", 
     "26", "27", "28", "29", "30"],
-    //Weekly
+    //Weekly line chart
     ["1", "2", "3", "4", "5", "6", "7"],
-    //Monthly
+    //Monthly line chart
     ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", 
     "27-3", "4-10", "11-17", "18-24", "25-31"]
   ],
   datasets: [
     {
-      //Hourly
+      //Hourly line chart
       data: [4, 2, 3, 4, 1, 3, 2, 3, 2, 4, 1, 3, 2, 3, 4, 2, 3, 1, 2, 1, 4, 3, 1, 2],
       backgroundColor: 'rgba(116, 119, 191, .3)',
       borderWidth: 1
     },
     {
-      //Daily
+      //Daily line chart
       data: [
         17, 21, 14, 18, 17, 25, 22, 19, 21, 24, 20, 18, 23, 21, 27,
         24, 21, 23, 17, 19, 20, 25, 23, 28, 21, 18, 19, 24, 22, 25
@@ -51,13 +46,13 @@ let newData = {
       borderWidth: 1
     },
     {
-      //Weekly
+      //Weekly line chart
       data: [120, 160, 130, 200, 150, 170, 130],
       backgroundColor: 'rgba(116, 119, 191, .3)',
       borderWidth: 1
     },
     {
-      //Monthly
+      //Monthly line chart
       data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
       backgroundColor: 'rgba(116, 119, 191, .3)',
       borderWidth: 1
@@ -65,43 +60,27 @@ let newData = {
   ]
 }
 
+// Add event listener to the chart navigation
+document.querySelector(".traffic-nav").addEventListener('click', handleNavClick);
+
+function handleNavClick({ target }) {
+  // If the event bubbled up from an li element
+  if (target.tagName === 'LI') {
+    // Get an array of list items and apply the active class to the target li
+    [...this.children].forEach(li => li.classList.remove('active'));
+    target.classList.add('active');
+
+    // Get the index of the target li and display the associated chart
+    const index = [...this.children].indexOf(target);
+    updateChart(index);
+  }
+}
+
 const updateChart = (filter) => {
   trafficChart.data.labels = newData.labels[filter];
   trafficChart.data.datasets[0].data = newData.datasets[filter].data;
   trafficChart.update();
 }
-
-hourly.addEventListener('click', () => {
-  hourly.classList.add("active");
-  daily.classList.remove("active");
-  weekly.classList.remove("active");
-  monthly.classList.remove("active");
-  updateChart(0);
-});
-
-daily.addEventListener('click', () => {
-  hourly.classList.remove("active");
-  daily.classList.add("active");
-  weekly.classList.remove("active");
-  monthly.classList.remove("active");
-  updateChart(1);
-});
-
-weekly.addEventListener('click', () => {
-  hourly.classList.remove("active");
-  daily.classList.remove("active");
-  weekly.classList.add("active");
-  monthly.classList.remove("active");
-  updateChart(2);
-});
-
-monthly.addEventListener('click', () => {
-  hourly.classList.remove("active");
-  daily.classList.remove("active");
-  weekly.classList.remove("active");
-  monthly.classList.add("active");
-  updateChart(3);
-});
 
 let trafficOptions = {
   backgroundColor: 'rgba(112, 104, 201, .5)',

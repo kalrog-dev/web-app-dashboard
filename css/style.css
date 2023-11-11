@@ -449,18 +449,19 @@ section {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  user-select: none;
 }
-.traffic .traffic-header .traffic-nav .traffic-nav-link {
+.traffic .traffic-header .traffic-nav-link {
   background-color: transparent;
   color: black;
   font-size: 0.95rem;
   padding: 7px 10px;
   border-radius: 20px;
 }
-.traffic .traffic-header .traffic-nav .traffic-nav-link:hover {
+.traffic .traffic-header .traffic-nav-link:hover {
   cursor: pointer;
 }
-.traffic .traffic-header .traffic-nav .traffic-nav-link.active {
+.traffic .traffic-header .traffic-nav-link.active {
   background-color: #81c98f;
   color: white;
 }
@@ -751,7 +752,7 @@ section {
   .traffic .traffic-header .traffic-nav {
     margin-bottom: 30px;
   }
-  .traffic .traffic-header .traffic-nav .traffic-nav-link {
+  .traffic .traffic-header .traffic-nav-link {
     font-size: 1.25rem;
     padding: 10px 16px;
   }
@@ -995,7 +996,7 @@ section {
   .traffic .traffic-header .traffic-nav {
     margin-bottom: 0px;
   }
-  .traffic .traffic-header .traffic-nav .traffic-nav-link {
+  .traffic .traffic-header .traffic-nav-link {
     font-size: 0.95rem;
     padding: 6px 11px;
   }

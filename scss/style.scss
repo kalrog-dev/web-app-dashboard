@@ -255,17 +255,16 @@ section {
 }
 
 .traffic {
-
   .traffic-header {
-
     .traffic-nav {
       list-style: none;
       background-color: white;
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      user-select: none;
       
-      .traffic-nav-link {
+      &-link {
         background-color: transparent;
         color: black;
         font-size: 0.95rem;
@@ -275,11 +274,11 @@ section {
         &:hover {
           cursor: pointer;
         }
-      }
 
-      .traffic-nav-link.active {
-        background-color: $green;
-        color: white;
+        &.active {
+          background-color: $green;
+          color: white;
+        }
       }
     }
   }
@@ -619,27 +618,20 @@ section {
     margin: 20px;
   }
 
-  .traffic {
-
-    .traffic-header {
-  
-      .traffic-nav {
-        margin-bottom: 30px;
-        
-        .traffic-nav-link {
-          font-size: 1.25rem;
-          padding: 10px 16px;
-        }
+  .traffic .traffic-header {
+    .traffic-nav {
+      margin-bottom: 30px;
+      
+      &-link {
+        font-size: 1.25rem;
+        padding: 10px 16px;
       }
     }
   }
 
-  .daily,
-  .mobile {
-
-    h3 {
-      margin-bottom: 30px;
-    }
+  .daily h3,
+  .mobile h3 {
+    margin-bottom: 30px;
   }
 
   .social h3,
@@ -939,7 +931,7 @@ section {
       .traffic-nav {
         margin-bottom: 0px;
 
-        .traffic-nav-link {
+        &-link {
           font-size: 0.95rem;
           padding: 6px 11px;
         }
@@ -948,12 +940,9 @@ section {
     }
   }
 
-  .daily,
-  .mobile {
-
-    h3 {
-      margin-bottom: 20px;
-    }
+  .daily h3,
+  .mobile h3 {
+    margin-bottom: 20px;
   }
 
   .daily {
@@ -1059,7 +1048,6 @@ section {
   }
 
   .settings {
-
     label {
       display: flex;
       margin-bottom: 20px;

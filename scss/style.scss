@@ -1,3 +1,5 @@
+@use 'vendors';
+
 // Colors
 $purple-light: #7477bf;
 $puprle-dark: #474669;
@@ -477,6 +479,7 @@ section {
     span {
       flex: 1;
       max-width: 75px;
+      cursor: pointer;
     }
   }
 

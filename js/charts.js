@@ -1,11 +1,11 @@
 //Line chart
-const trafficCanvas = document.getElementById("traffic-chart");
+const trafficCanvas = document.getElementById('traffic-chart');
 
 // Data of the currently displayed line chart. This is monthly traffic by default
 const trafficData = {
   labels: [
-    "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", 
-    "27-3", "4-10", "11-17", "18-24", "25-31"
+    '16-22', '23-29', '30-5', '6-12', '13-19', '20-26', 
+    '27-3', '4-10', '11-17', '18-24', '25-31'
   ],
   datasets: [{
     data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
@@ -43,17 +43,17 @@ const trafficChart = new Chart(trafficCanvas, {
 const newData = {
   labels: [
     // Hourly line chart
-    ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
-    "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+    ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+    '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
     // Daily line chart
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", 
-    "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", 
-    "26", "27", "28", "29", "30"],
+    ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 
+    '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', 
+    '26', '27', '28', '29', '30'],
     // Weekly line chart
-    ["1", "2", "3", "4", "5", "6", "7"],
+    ['1', '2', '3', '4', '5', '6', '7'],
     // Monthly line chart
-    ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", 
-    "27-3", "4-10", "11-17", "18-24", "25-31"]
+    ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', 
+    '27-3', '4-10', '11-17', '18-24', '25-31']
   ],
   datasets: [
     {
@@ -87,7 +87,7 @@ const newData = {
 }
 
 // Add event listener to the chart navigation
-document.querySelector(".traffic-nav").addEventListener('click', handleNavClick);
+document.querySelector('.traffic-nav').addEventListener('click', handleNavClick);
 
 function handleNavClick({ target }) {
   // If the event bubbled up from an li element
@@ -110,10 +110,10 @@ const updateChart = (filter) => {
 }
 
 //Bar graph
-const dailyCanvas = document.getElementById("daily-chart");
+const dailyCanvas = document.getElementById('daily-chart');
 
 const dailyData = {
-  labels: ["S", "M", "T", "W", "T", "F", "S"],
+  labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
   datasets: [{
     label: '# of Hits',
     data: [75, 115, 175, 125, 225, 200, 100],
@@ -142,10 +142,10 @@ const dailyChart = new Chart(dailyCanvas, {
 });
 
 //Doughnut chart
-const mobileCanvas = document.getElementById("mobile-chart");
+const mobileCanvas = document.getElementById('mobile-chart');
 
 const mobileData = {
-  labels: ["Desktop", "Tablet", "Phones"],
+  labels: ['Desktop', 'Tablet', 'Phones'],
   datasets: [{
     label: '# of Users',
     data: [2000, 550, 500],

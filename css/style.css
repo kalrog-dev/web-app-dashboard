@@ -296,8 +296,8 @@ body {
   height: 40px;
   width: 40px;
 }
-.primary-header .bell-container #show-notif {
-  display: none;
+.primary-header .bell-container .notification-container {
+  display: flex;
   flex-direction: column;
   position: absolute;
   margin-inline: auto;
@@ -310,26 +310,28 @@ body {
   box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
   border: 1px solid #ccc;
 }
-.primary-header .bell-container #show-notif .notif1,
-.primary-header .bell-container #show-notif .notif2 {
+.primary-header .bell-container .notification-container.hide {
+  display: none;
+}
+.primary-header .bell-container .notification-container .notification {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
   padding: 5px;
 }
-.primary-header .bell-container #show-notif .notif1 {
+.primary-header .bell-container .notification-container .notification:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
 }
-.primary-header .bell-container #show-notif img {
+.primary-header .bell-container .notification-container img {
   height: 50px;
   width: 50px;
 }
-.primary-header .bell-container #show-notif .notif-text {
+.primary-header .bell-container .notification-container .notif-text {
   color: black;
   font-size: 0.9rem;
 }
-.primary-header .bell-container #show-notif .notif-text p:nth-child(2) {
+.primary-header .bell-container .notification-container .notif-text p:nth-child(2) {
   color: #666;
   font-size: 0.8rem;
   margin-top: 4px;
@@ -354,7 +356,7 @@ body {
     transform: rotate(0deg);
   }
 }
-.primary-header .bell-container #notifications {
+.primary-header .bell-container #notification-dot {
   position: absolute;
   background-color: #90ee90;
   width: 5px;
@@ -708,13 +710,13 @@ section {
     height: 50px;
     width: 50px;
   }
-  .primary-header .bell-container #show-notif {
+  .primary-header .bell-container .notification-container {
     top: 54px;
   }
   .primary-header .bell-container .bell-icon {
     width: 28px;
   }
-  .primary-header .bell-container #notifications {
+  .primary-header .bell-container #notification-dot {
     width: 7px;
     height: 7px;
   }
@@ -878,13 +880,13 @@ section {
     height: 45px;
     width: 45px;
   }
-  .primary-header .bell-container #show-notif {
+  .primary-header .bell-container .notification-container {
     top: 44px;
   }
   .primary-header .bell-container .bell-icon {
     width: 22px;
   }
-  .primary-header .bell-container #notifications {
+  .primary-header .bell-container #notification-dot {
     width: 5px;
     height: 5px;
     border-radius: 50%;

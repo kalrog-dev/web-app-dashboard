@@ -85,8 +85,8 @@ body {
     height: 40px;
     width: 40px;
 
-    #show-notif {
-      display: none;
+    .notification-container {
+      display: flex;
       flex-direction: column;
       position: absolute;
       margin-inline: auto;
@@ -98,9 +98,12 @@ body {
       padding: 10px;
       box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
       border: 1px solid #ccc;
+      
+      &.hide {
+        display: none;
+      }
 
-      .notif1,
-      .notif2 {
+      .notification {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -108,7 +111,7 @@ body {
         padding: 5px;
       }
 
-      .notif1 {
+      .notification:not(:last-of-type) {
         border-bottom: 1px solid #ccc;
       }
 
@@ -154,7 +157,7 @@ body {
       }
     }
   
-    #notifications {
+    #notification-dot {
       position: absolute;
       background-color: #90ee90;
       width: 5px;
@@ -563,7 +566,7 @@ section {
       height: 50px;
       width: 50px;
 
-      #show-notif {
+      .notification-container {
         top: 54px;
       }
   
@@ -571,7 +574,7 @@ section {
         width: 28px;
       }
     
-      #notifications {
+      #notification-dot {
         width: 7px;
         height: 7px;
       }
@@ -782,7 +785,7 @@ section {
       height: 45px;
       width: 45px;
 
-      #show-notif {
+      .notification-container {
         top: 44px;
       }
   
@@ -790,7 +793,7 @@ section {
         width: 22px;
       }
     
-      #notifications {
+      #notification-dot {
         width: 5px;
         height: 5px;
         border-radius: 50%;

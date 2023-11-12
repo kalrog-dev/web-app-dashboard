@@ -1,35 +1,14 @@
 @use 'vendors';
-
-// Colors
-$purple-light: #7477bf;
-$puprle-dark: #474669;
-$off-white: #f7f7f7;
-$green: #81c98f;
-$teal: #51b6c8;
-$gray: #cccccc;
+@use 'base';
+@use 'utils' as *;
+@use 'layout';
 
 * {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  padding-block: 5px;
-  font-size: 0.95rem;
-}
-
-hr {
-  border: 1px solid $gray;
-  border-bottom: none;
 }
 
 body {
   color: $off-white;
-  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -37,18 +16,24 @@ body {
   margin: auto;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header"
-    "navigation"
-    "main";
+h1 {
+  flex: 1;
+
+  a {
+    color: white;
+  }
+}
+
+h3 {
+  padding-block: 5px;
+}
+
+hr {
+  border: 1px solid $gray;
+  border-bottom: none;
 }
 
 .primary-header {
-  grid-area: header;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,25 +42,6 @@ body {
   height: 64px;
   background-color: $purple-light;
   color: white;
-
-  h1 {
-    flex: 1;
-    font-weight: 400;
-    font-size: 1.35rem;
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    strong {
-      font-weight: 700;
-    }
-
-    sup {
-      font-size: 0.5rem;
-    }
-  }
 
   .bell-container {
     display: flex;
@@ -122,11 +88,9 @@ body {
 
       .notif-text {
         color: black;
-        font-size: 0.9rem;
         
         p:nth-child(2) {
           color: #666;
-          font-size: 0.8rem;
           margin-top: 4px;
         }
       }
@@ -177,14 +141,9 @@ body {
     width: 38px;
     border-radius: 50%;
   }
-
-  span {
-    font-size: 0.8rem;
-  }
 }
 
 nav {
-  grid-area: navigation;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +158,6 @@ nav {
 }
 
 main {
-  grid-area: main;
   color: black;
   background-color: white;
 }
@@ -213,8 +171,6 @@ main {
 
   .headline {
     background-color: white;
-    font-weight: 400;
-    font-size: 1.1rem;
   }
 
   .tab {
@@ -228,18 +184,17 @@ main {
 }
 
 .alert-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding-block: 25px;
   height: 36px;
   color: $off-white;
   background-color: $purple-light;
-  margin: 15px;
-  padding-block: 25px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   
   p {
-    font-size: 0.9rem;
     padding: 15px;
   }
 
@@ -260,18 +215,17 @@ section {
 .traffic {
   .traffic-header {
     .traffic-nav {
-      list-style: none;
-      background-color: white;
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      list-style: none;
       user-select: none;
+      background-color: white;
       
       &-link {
-        background-color: transparent;
-        color: black;
-        font-size: 0.95rem;
         padding: 7px 10px;
+        color: black;
+        background-color: transparent;
         border-radius: 20px;
 
         &:hover {
@@ -296,7 +250,6 @@ section {
 
 .daily,
 .mobile {
-
   h3 {
     margin-bottom: 20px;
   }
@@ -321,16 +274,16 @@ section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 96px;
+  margin-bottom: 15px;
   background-color: $off-white;
   border: 1px solid $gray;
   border-radius: 6px;
-  margin-bottom: 15px;
-  height: 96px;
 
   .social-image {
-    margin: 20px;
     width: 60px;
     height: 60px;
+    margin: 20px;
     background: $purple-light;
     border: 15px solid $purple-light;
     border-radius: 50%;
@@ -338,16 +291,13 @@ section {
 
   .social-image svg {
     fill: white;
-    
   }
 
   .social-text p:first-child {
-    font-size: 1.05rem;
     color: $purple-light;
   }
-
+  
   .social-text p:last-child {
-    font-size: 2.2rem;
     color: #757575;
   }
 }
@@ -360,10 +310,9 @@ section {
 .members-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding-inline: 15px;
-  font-size: 0.8rem;
 
   .profile-image {
     width: 60px;
@@ -376,11 +325,6 @@ section {
 
     a {
       color: $purple-light;
-      text-decoration: none;
-    }
-
-    strong {
-      font-weight: 500;
     }
   }
 
@@ -430,12 +374,9 @@ section {
     border: 1px solid $gray;
     border-radius: 5px;
     padding: 8px 8px 8px 10px;
-    font-size: 0.95rem;
-    font-family: sans-serif;
 
     &::placeholder {
       color: #777;
-      font-size: 0.95rem;
     }
   }
 
@@ -443,7 +384,6 @@ section {
   textarea {
     margin-bottom: 15px;
     background-color: $off-white;
-
   }
 
   textarea {
@@ -457,8 +397,6 @@ section {
   button {
     background-color: $purple-light;
     color: $off-white;
-    text-transform: uppercase;
-    font-size: 0.95rem;
 
     &:hover {
       cursor: pointer;
@@ -467,12 +405,10 @@ section {
 }
 
 .settings {
-
   label {
     display: flex;
     align-items: center;
     margin-bottom: 22px;
-    font-size: 0.95rem;
 
     strong {
       flex: 3;
@@ -493,7 +429,6 @@ section {
     border-radius: 8px;
     padding: 10px 10px 10px 15px;
     color: #777;
-    font-size: 0.95rem;
     margin-bottom: 15px;
     margin-top: 10px;
     background: url(../img/svg/triangle.svg) no-repeat 96% 50%;
@@ -515,9 +450,7 @@ section {
     height: 45px;
     border: 1px solid $gray;
     border-radius: 5px;
-    font-size: 0.95rem;
     margin-bottom: 5px;
-    text-transform: uppercase;
 
     &:hover {
       cursor: pointer;
@@ -546,21 +479,9 @@ section {
 }
 
 @media (min-width: 430px) {
-  h3 {
-    font-size: 1.2rem;
-  }
-
   .primary-header {
     padding: 20px;
     height: 80px;
-  
-    h1 {
-      font-size: 1.75rem;
-
-      sup {
-        font-size: 0.7rem;
-      }
-    }
   
     .bell-container {
       height: 50px;
@@ -587,10 +508,6 @@ section {
     img {
       width: 50px;
     }
-  
-    span {
-      font-size: 1.1rem;
-    }
   }
 
   nav {
@@ -607,10 +524,6 @@ section {
     height: 70px;
     margin-left: 20px;
   
-    .headline {
-      font-size: 1.35rem;
-    }
-  
     .tab {
       flex: 1;
       height: 70px;
@@ -626,7 +539,6 @@ section {
       margin-bottom: 30px;
       
       &-link {
-        font-size: 1.25rem;
         padding: 10px 16px;
       }
     }
@@ -655,14 +567,6 @@ section {
       height: 80px;
       border: 20px solid $purple-light;
     }
-  
-    .social-text p:first-child {
-      font-size: 1.5rem;
-    }
-  
-    .social-text p:last-child {
-      font-size: 3rem;
-    }
   }
 
   .members hr,
@@ -672,7 +576,6 @@ section {
 
   .members-container {
     padding-inline: 35px;
-    font-size: 1rem;
   
     .profile-image {
       width: 85px;
@@ -686,17 +589,11 @@ section {
       height: 65px;
       border-radius: 8px;
       padding: 10px 10px 10px 15px;
-      font-size: 1.25rem;
-
-      &::placeholder {
-        font-size: 1.25rem;
-      }
     }
   
     input,
     textarea {
       margin-bottom: 20px;
-  
     }
   
     textarea {
@@ -706,17 +603,11 @@ section {
       min-width: 100%;
       max-width: 100%;
     }
-  
-    button {
-      font-size: 1.2rem;
-    }
   }
 
   .settings {
-
     label {
       margin-bottom: 20px;
-      font-size: 1.1rem;
 
       span {
         max-width: 90px;
@@ -725,7 +616,6 @@ section {
   
     #timezone {
       height: 65px;
-      font-size: 1.25rem;
       margin-bottom: 20px;
       margin-top: 0px;
       background: url(../img/svg/triangle.svg) no-repeat 97% 50%;
@@ -741,7 +631,6 @@ section {
     #cancel {
       height: 65px;
       border-radius: 8px;
-      font-size: 1.25rem;
     }
   }
 }
@@ -749,37 +638,13 @@ section {
 @media (min-width: 550px) {
   .alert-banner {
     height: 50px;
-    
-    p {
-      font-size: 1.25rem;
-    }
   }
 }
 
 @media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 55px 1fr;
-    grid-template-areas:
-      "header header"
-      "navigation main";
-  }
-
-  h3 {
-    font-size: 0.9rem;
-  }
-
   .primary-header {
     padding: 20px 10px;
     height: 70px;
-  
-    h1 {
-      font-weight: 400;
-      font-size: 1.3rem;
-  
-      sup {
-        font-size: 0.5rem;
-      }
-    }
   
     .bell-container {
       height: 45px;
@@ -809,20 +674,16 @@ section {
     img {
       width: 40px;
     }
-  
-    span {
-      font-size: 0.8rem;
-    }
   }
 
   nav {
     position: sticky;
-    top: 0px;
     flex-direction: column;
     justify-content: flex-start;
     gap: 22px;
-    height: 100vh;
     width: 70px;
+    height: 100vh;
+    top: 0px;
     padding-top: 20px;
 
     svg {
@@ -830,74 +691,13 @@ section {
     }
   }
 
-  // Grid
   main {
-    //Grid layout start
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
     margin-left: 10px;
-    
-    hr {
-      grid-column: 1 / span 6;
-    }
-
-    .daily + hr {
-      grid-row: 1;
-    }
-
-    .main-header,
-    .alert-container,
-    .traffic {
-      grid-column: 1 / span 6;
-    }
-
-    .daily {
-      grid-column: 1 / span 3;
-    }
-
-    .mobile {
-      grid-column: 4 / span 3;
-    }
-
-    .social {
-      grid-column: 1 / span 6;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-
-      h3 {
-        grid-column: 1 / span 3;
-      }
-
-      .social-container:nth-of-type(1) {
-        grid-column: 1 / span 1;
-      }
-
-      .social-container:nth-of-type(2) {
-        grid-column: 2 / span 1;
-      }
-      
-      .social-container:nth-of-type(3) {
-        grid-column: 3 / span 1;
-      }
-    }
-
-    .members,
-    .activity,
-    .message,
-    .settings {
-      grid-column: 1 / span 6;
-    }
-    // Grid layout end
   }
 
   .main-header {
     gap: 15px;
     height: 55px;
-  
-    .headline {
-      font-size: 1.1rem;
-    }
   
     .tab {
       height: 52px;
@@ -913,13 +713,12 @@ section {
     border-radius: 6px;
     
     p {
-      font-size: 0.9rem;
       padding: 15px;
     }
   }
 
   section {
-    margin: 5px 20px;   //20px
+    margin: 5px 20px;
   }
 
   .traffic {
@@ -935,7 +734,6 @@ section {
         margin-bottom: 0px;
 
         &-link {
-          font-size: 0.95rem;
           padding: 6px 11px;
         }
 
@@ -970,14 +768,6 @@ section {
       height: 60px;
       border: 15px solid $purple-light;
     }
-  
-    .social-text p:first-child {
-      font-size: 1.05rem;
-    }
-  
-    .social-text p:last-child {
-      font-size: 2rem;
-    }
   }
 
   .members hr,
@@ -995,7 +785,6 @@ section {
     flex-direction: row;
     justify-content: inherit;
     padding-inline: 0px;
-    font-size: 0.9rem;
   
     .profile-image {
       width: 60px;
@@ -1010,7 +799,6 @@ section {
     .arrow {
       display: block;
       color: $purple-light;
-      font-size: 1.35rem;
       margin-left: 10px;
       cursor: default;
      }
@@ -1023,11 +811,6 @@ section {
       height: 45px;
       border-radius: 5px;
       padding: 8px 8px 8px 12px;
-      font-size: 0.9rem;
-
-      &::placeholder {
-        font-size: 0.9rem;
-      }
     }
   
     input,
@@ -1045,7 +828,6 @@ section {
     }
   
     button {
-      font-size: 1rem;
       margin-bottom: 10px;
     }
   }
@@ -1054,7 +836,6 @@ section {
     label {
       display: flex;
       margin-bottom: 20px;
-      font-size: 0.9rem;
       width: 300px;
 
       span {
@@ -1064,7 +845,6 @@ section {
   
     #timezone {
       height: 45px;
-      font-size: 0.9rem;
       margin-bottom: 15px;
       margin-top: 0px;
       border-radius: 5px;
@@ -1081,7 +861,6 @@ section {
     #cancel {
       height: 45px;
       border-radius: 5px;
-      font-size: 1rem;
       margin-bottom: 10px;
     }
   }
@@ -1090,27 +869,6 @@ section {
 @media (min-width: 1024px) {
   body {
     background-color: darken($puprle-dark, 10%);
-  }
-
-  // Grid
-  main {
-    .members,
-    .message {
-      grid-column: 1 / span 3;
-    }
-
-    .activity {
-      grid-row: 10;
-    }
-
-    .activity,
-    .settings {
-      grid-column: 4 / span 3;
-    }
-
-    .settings {
-      grid-row: 12;
-    }
   }
 
   .members,

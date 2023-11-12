@@ -1,0 +1,261 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.35rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  sup {
+    font-size: 0.5rem;
+  }
+}
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.notif-text {
+  font-size: 0.9rem;
+  
+  p:nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
+
+.primary-header span {
+  font-size: 0.8rem;
+}
+
+// Main section
+.headline {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.alert-banner p {
+  font-size: 0.9rem;
+}
+
+.traffic-nav-link {
+  font-size: 0.95rem;
+}
+
+.social-text p:first-child {
+  font-size: 1.05rem;
+}
+
+.social-text p:last-child {
+  font-size: 2.2rem;
+}
+
+.members-container {
+  font-size: 0.8rem;
+}
+
+.members-text a {
+  text-decoration: none;
+}
+
+.members-text strong {
+  font-weight: 500;
+}
+
+.widget-container {
+  input,
+  textarea,
+  button {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+
+    &::placeholder {
+      font-size: 0.95rem;
+    }
+  }
+
+  button {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+}
+
+.settings {
+  label {
+    font-size: 0.95rem;
+  }
+
+  #timezone {
+    font-size: 0.95rem;
+  }
+
+  #save,
+  #cancel {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 430px) {
+  h1 {
+    font-size: 1.75rem;
+
+    sup {
+      font-size: 0.7rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .primary-header span {
+    font-size: 1.1rem;
+  }
+
+  // Main section
+  .headline {
+    font-size: 1.35rem;
+  }
+
+  .traffic-nav-link {
+    font-size: 1.25rem;
+  }
+
+  .social-text p:first-child {
+    font-size: 1.5rem;
+  }
+
+  .social-text p:last-child {
+    font-size: 3rem;
+  }
+
+  .members-container {
+    font-size: 1rem;
+  }
+
+  .widget-container {
+    input,
+    textarea,
+    button {
+      font-size: 1.25rem;
+
+      &::placeholder {
+        font-size: 1.25rem;
+      }
+    }
+  
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  .settings {
+    label {
+      font-size: 1.1rem;
+    }
+  
+    #timezone {
+      font-size: 1.25rem;
+    }
+  
+    #save,
+    #cancel {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .alert-banner p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    sup {
+      font-size: 0.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .primary-header span {
+    font-size: 0.8rem;
+  }
+
+  .headline {
+    font-size: 1.1rem;
+  }
+
+  .alert-banner p {
+    font-size: 0.9rem;
+  }
+
+  .traffic-nav-link {
+    font-size: 0.95rem;
+  }
+
+  .social-text p:first-child {
+    font-size: 1.05rem;
+  }
+
+  .social-text p:last-child {
+    font-size: 2rem;
+  }
+
+
+  .members-container {
+    font-size: 0.9rem;
+
+    .arrow {
+      font-size: 1.35rem;
+     }
+  }
+
+  .widget-container {
+    input,
+    textarea,
+    button {
+      font-size: 0.9rem;
+
+      &::placeholder {
+        font-size: 0.9rem;
+      }
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  .settings {
+    label {
+      font-size: 0.9rem;
+    }
+  
+    #timezone {
+      font-size: 0.9rem;
+    }
+  
+    #save,
+    #cancel {
+      font-size: 1rem;
+    }
+  }
+}

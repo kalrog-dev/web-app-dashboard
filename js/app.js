@@ -1,4 +1,4 @@
-//Alert banner
+// Alert banner
 const alertBanner = document.getElementById("alert");
 
 alertBanner.innerHTML =
@@ -12,25 +12,24 @@ alertBanner.addEventListener('click', e => {
   alertBanner.style.display = e.target.closest(".alert-banner-close") ? "none" : "";
 });
 
-//Message section
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
-
-send.addEventListener('click', () => {
-  // Ensure user and message fields are filled out
-  if (user.value === "" && message.value === "") {
-  alert("Please fill out user and message fields before sending");
-  } else if (user.value === "" ) {
-  alert("Please fill out user field before sending");
-  } else if (message.value === "" ) {
-  alert("Please fill out message field before sending");
+// Send a message with a simple check if none of the required fields is blank
+document.getElementById("send").addEventListener('click', (e) => {
+  const user = document.getElementById("userField").value;
+  const msg = document.getElementById("messageField").value;
+  const regex = /^\s*$/;
+  
+  if (regex.test(user) && regex.test(msg)) {
+    alert("Please fill out user and msg fields before sending");
+  } else if (regex.test(user)) {
+    alert("Please fill out user field before sending");
+  } else if (regex.test(msg)) {
+    alert("Please fill out msg field before sending");
   } else {
-  alert(`Message successfully sent to: ${user.value}`);
+    alert(`Message successfully sent to: ${user}`);
   }
 });
 
-//Save settings to local storage
+// Save settings to local storage
 const emailCheckbox = document.getElementById("email-checkbox");
 const publicCheckbox = document.getElementById("public-checkbox");
 const timezone = document.getElementById("timezone");
@@ -50,12 +49,12 @@ cancel.addEventListener('click', () => {
   timezone.selectedIndex = 0;
 });
 
-//Update on reload
+// Update on reload
 emailCheckbox.checked = localStorage.getItem("Email") === "true";
 publicCheckbox.checked = localStorage.getItem("Public") === "true";
 timezone.selectedIndex = Number(localStorage.getItem("Timezone"));
 
-//Notifications
+// Notifications
 const notif = document.getElementById("show-notif");
 const bell = document.getElementById("bell-icon");
 const notifDot = document.getElementById("notifications");

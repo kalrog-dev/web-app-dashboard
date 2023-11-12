@@ -3,8 +3,6 @@
   Source: https://www.w3schools.com/howto/howto_js_autocomplete.asp
 */
 
-let users = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
-
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -101,5 +99,44 @@ function autocomplete(inp, arr) {
     closeAllLists(e.target);
   });
 }
+
+let users = [
+  "Victoria Chambers", 
+  "Dale Byrd", 
+  "Dawn Wood", 
+  "Dan Oliver",
+  "Camille Wilcox",
+  "Jerry Cordova",
+  "Florence Coleman",
+  "Johnathan Dunn",
+  "Beatrice Vaughn",
+  "Ariel Stanton",
+  "Zyair Perkins",
+  "Sage Barrera",
+  "Makai Ball",
+  "Abby Molina",
+  "Parker Martinez",
+  "Alexander McClure",
+  "Estella O'brien",
+  "Riley Cisneros",
+  "Samuel O'Connell",
+  "Paola McIntosh",
+  "Kristian Ellis",
+  "Benicio Knox",
+  "Kallie Cabrera",
+  "Cade Mack",
+  "Nadia Riley",
+  "Hank Ibarra",
+  "Liv Escobar",
+  "Thatcher Reynolds",
+  "Giovanna Sellers",
+  "Paul Cortes",
+  "Omari Horn",
+  "Ivanna Merritt",
+  "John Hayes",
+  "Vera Blackwell",
+  "Marcelo Craig",
+  "Emely Chung"
+];
 
 autocomplete(document.getElementById("userField"), users);

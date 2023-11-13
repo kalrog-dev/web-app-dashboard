@@ -60,7 +60,16 @@ const notifications = document.querySelector('.notification-container');
 const notifDot = document.getElementById('notification-dot');
 
 bell.addEventListener('click', () => {
-  notifications.classList.toggle('hide')
+  notifications.classList.toggle('hide');
   notifDot.style.display = 'none';
 })
 
+// Close notifications window by clicking outside of it
+document.body.addEventListener('click', handleBgClick);
+
+function handleBgClick() {
+  if (!notifications.classList.contains('hide') && !e.target.closest('.notification-container')
+  && !e.target.closest('#bell-icon')) {
+    notifications.classList.add('hide');
+  }
+}

@@ -67,7 +67,7 @@ bell.addEventListener('click', () => {
 // Close notifications window by clicking outside of it
 document.body.addEventListener('click', handleBgClick);
 
-function handleBgClick() {
+function handleBgClick(e) {
   if (!notifications.classList.contains('hide') && !e.target.closest('.notification-container')
   && !e.target.closest('#bell-icon')) {
     notifications.classList.add('hide');

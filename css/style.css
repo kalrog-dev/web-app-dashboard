@@ -911,6 +911,9 @@ section {
   -webkit-appearance: none;
   appearance: none;
 }
+.settings #timezone:hover {
+  cursor: pointer;
+}
 .settings .settings-button {
   display: flex;
   justify-content: space-around;
